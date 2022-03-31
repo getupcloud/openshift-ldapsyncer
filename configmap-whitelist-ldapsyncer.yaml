@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ldap-group-syncer-whitelist
+  namespace: openshift-authentication
+  labels:
+    app: cronjob-ldap-group-sync
+data:
+  whitelist.txt: |
+    CN=OpenshiftAdmin,OU=Groups,DC=company,DC=example,DC=com
+    CN=OpenshiftDev,OU=Groups,DC=company,DC=example,DC=com
